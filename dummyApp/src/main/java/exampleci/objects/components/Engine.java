@@ -6,6 +6,7 @@ public class Engine implements exampleci.interfaces.iComponent {
 	private String partId;
 	private String serialNo;
 	private String manufacturer;
+	private boolean engineRunning;
 	private int valveCount;
 	private double size;
 	
@@ -76,6 +77,14 @@ public class Engine implements exampleci.interfaces.iComponent {
 
 	public void setManufacturer(String manufacturer) {
 	    this.manufacturer = manufacturer;
+    }
+
+	public boolean isEngineRunning() {
+	    return engineRunning;
+    }
+
+	public void setEngineRunning(boolean engineRunning) {
+	    this.engineRunning = engineRunning;
     }	
 	
 }

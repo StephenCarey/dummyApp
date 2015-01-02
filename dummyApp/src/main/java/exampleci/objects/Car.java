@@ -2,11 +2,14 @@ package exampleci.objects;
 
 import exampleci.objects.components.Exhaust;
 import exampleci.objects.components.Wheel;
+import exampleci.objects.components.Engine;
+
 
 public class Car extends LandVehicle {
 	
 	// Because a car has more that one wheel an array is needed
 	public Exhaust myExhaust = new Exhaust();
+	private Engine myEngine = new Engine();
 	
 	// Default constructor for the Car class
 	public Car(){
@@ -25,6 +28,13 @@ public class Car extends LandVehicle {
 		
 	}
 	
+	public void startCar(){
+		myEngine.setEngineRunning(true);
+	}
+	
+	public boolean isCarRunning(){
+		return myEngine.isEngineRunning();
+	}
 
 }
 
