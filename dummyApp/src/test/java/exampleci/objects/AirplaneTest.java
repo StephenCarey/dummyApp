@@ -4,17 +4,13 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-/**
- * Unit test for simple App.
- */
-public class CarTest extends TestCase
-{
-    /**
+public class AirplaneTest extends TestCase {
+	   /**
      * Create the test case
      *
      * @param EngineTests name of the test case
      */
-    public CarTest( String testName )
+    public AirplaneTest( String testName )
     {
         super( testName );
     }
@@ -24,7 +20,7 @@ public class CarTest extends TestCase
      */
     public static Test suite()
     {
-        return new TestSuite( CarTest.class );
+        return new TestSuite( AirplaneTest.class );
     }
 
     /**
@@ -32,10 +28,11 @@ public class CarTest extends TestCase
      */
     public void testStartEngine()
     {
-    	Car testC = new Car();
-		assertFalse(testC.isCarRunning());
-		testC.startCar();
-    	assertTrue(testC.isCarRunning());
+    	Airplane testA = new Airplane();
+		assertFalse(testA.isPlaneRunning());
+		testA.startEngine();
+    	assertTrue(testA.isPlaneRunning());
     }
+	
+	
 }
-

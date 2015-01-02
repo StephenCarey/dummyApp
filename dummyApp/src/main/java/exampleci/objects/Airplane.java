@@ -8,10 +8,13 @@ import exampleci.objects.components.*;
 public class Airplane extends AirVehicle {
 	
 	// Should these all be public???
-	public Engine engineComponent;
+	private Engine engineComponent;
 	public Tail tailComponent;
 	public LandingGear landingGearComponent;
 	
+	public Airplane (){
+		engineComponent = new Engine();
+	}
 	
 	// This code is messy and cumbersome. Refactoring required.
 	public void AddComponent(LandingGear newLandingGear){
@@ -28,7 +31,16 @@ public class Airplane extends AirVehicle {
 		myWheels.add(Wheel4);
 		myWheels.add(Wheel5);
 		myWheels.add(Wheel6);
+		
+		
 	}
 	
+	public void startEngine(){
+		engineComponent.setEngineRunning(true);
+	}
+	
+	public boolean isPlaneRunning(){
+		return engineComponent.isEngineRunning();
+	}
 
 }
