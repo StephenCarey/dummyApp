@@ -24,13 +24,14 @@ public class Wheel implements exampleci.interfaces.iComponent{
 	}
 		
 	// Custom constructor for the Wheel class
-	public Wheel(boolean alloyIn, int heightIn, int widthIn, int boltCountIn, String styleIn){
+	public Wheel(boolean alloyIn, int heightIn, int widthIn, int boltCountIn, String styleIn, String partID){
 		
 		this.isAlloy=alloyIn;
 		this.height=heightIn;
 		this.width=widthIn;
 		this.boltCount=boltCountIn;
-		this.style=styleIn;		
+		this.style=styleIn;
+		this.partId=partID;
 				
 	}
 
